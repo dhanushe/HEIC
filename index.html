@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSA Webmaster</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        #hero-section {
+            background: linear-gradient(90deg, #072227 0%, #0a1a1c 100%); padding-top: 10%; padding-bottom: 10%;
+            animation: backgroundcoloranimation 2s ease infinite;
+        }
+
+        #color-bg-text {
+            background-color: #AEFEFF;
+            color: #072227;
+            padding: 5px;
+            border-radius: 10px;
+            max-width: min-content;
+            display: inline-block;
+        }
+
+        .gray-background {
+            background: linear-gradient(90deg, #072227 0%, #255b5f 100%);
+            padding: 7px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        @keyframes backgroundcoloranimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="relative bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                </div>
+                <nav class="md:flex space-x-10">
+                    <div class="relative">
+                        <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+                        <button type="button"
+                            class="text-gray-500 group bg-white inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span>Dates</span>
+                        </button>
+                    </div>
+    
+                    <div class="relative mx-2">
+                        <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+                        <button type="button"
+                            class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span>Guidelines</span>
+                        </button>
+                    </div>
+
+                    <div class="relative mx-2">
+                        <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+                        <button type="button"
+                            class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span>About</span>
+                        </button>
+                    </div>
+    
+                    <div class="relative mx-2">
+                        <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+                        <button type="button"
+                            class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span>Contact</span>
+                        </button>
+                    </div>
+
+                </nav>
+                <div class="md:flex items-center justify-end md:flex-1 lg:w-0">
+                    <a href="#"
+                        class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                        Register
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Hero Section -->
+    <section class="mx-auto px-auto text-center" id="hero-section">
+        <div class="container text-center p-32">
+            <h2 class="text-4xl font-bold mb-2 text-white text-center" style="text-align: center;">
+                <div>
+                    <span data-aos="fade-in">Highschool Engineering Innovation Conference</span> <div data-aos="zoom-in" data-aos-delay="300" id="color-bg-text">2022</div>
+                </div> 
+            </h2>
+            <h3 class="text-2xl mb-8 text-gray-200">
+                An opportunity for the high school students to create and present technology oriented projects.
+            </h3>
+            <div>
+                <button class="bg-white font-bold rounded-full py-4 mb-3 px-8 shadow-lg uppercase tracking-wider">
+                    Register - Participant
+                </button>
+                <br>
+                <button class="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
+                    Register - Attendees
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Create an About Section which has a header and some text -->
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="bg-gray-50">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                <span class="block">About Us</span>
+            </h2>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                <div>
+                    testing
+                </div>
+                
+                <div class="inline-flex rounded-md shadow">
+                    <a href="#"
+                        class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                        Get started
+                    </a>
+                </div>
+                <div class="ml-3 inline-flex rounded-md shadow">
+                    <a href="#"
+                        class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
+                        Learn more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
