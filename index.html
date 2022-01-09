@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         #hero-section {
-            background: linear-gradient(90deg, #072227 0%, #0a1a1c 100%); padding-top: 10%; padding-bottom: 10%;
+            background: linear-gradient(90deg, #020b0c 0%, #0a1a1c 100%); padding-top: 10%; padding-bottom: 10%;
             animation: backgroundcoloranimation 2s ease infinite;
         }
 
@@ -24,9 +24,9 @@
         }
 
         .gray-background {
-            background: linear-gradient(90deg, #072227 0%, #255b5f 100%);
+            background: linear-gradient(90deg, #cbcecf 0%, #afb2b3 100%);
             padding: 7px;
-            color: white;
+            color: black;
             border-radius: 10px;
         }
 
@@ -44,7 +44,7 @@
         }
     </style>
 </head>
-<body>
+<body style="scroll-behavior: smooth">
 
     <!-- Nav Bar -->
     <!-- This example requires Tailwind CSS v2.0+ -->
@@ -53,7 +53,7 @@
             <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                 <div class="flex justify-start lg:w-0 lg:flex-1">
                 </div>
-                <nav class="md:flex space-x-10">
+                <nav class="md:flex space-x-10" id="navbar">
                     <div class="relative">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button"
@@ -75,6 +75,14 @@
                         <button type="button"
                             class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>About</span>
+                        </button>
+                    </div>
+
+                    <div class="relative mx-2">
+                        <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+                        <button type="button"
+                            class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span>FAQ</span>
                         </button>
                     </div>
     
@@ -129,10 +137,10 @@
             class="h-screen bg-center flex justify-items-center items-center">
             <div class="px-10 lg:px-32 xl:px-40">
                 <h1 class="text-6xl font-semibold mb-6">
-                    <span class="text-red-500">About Us</span> <br />
+                    <span style="color: #04293A;">About Us</span> <br />
                 </h1>
-                <p class="text-lg max-w-md">HEIC is an opportunity for high school students to create and present technology oriented projects in this conference. Each year, six high school student's will be selected based on the creativity, technological excellence, and impact of their project</p>
-                <p class="text-lg max-w-md mt-2">Even if you are not participating, you can still attend, and watch these exceptional students.</p>
+                <p class="text-lg max-w-md" style="color: #064663;">HEIC is an opportunity for high school students to create and present technology oriented projects in this conference. Each year, six high school student's will be selected based on the creativity, technological excellence, and impact of their project</p>
+                <p class="text-lg max-w-md mt-2 font-semibold" style="color: #064663;">Even if you are not participating, you can still attend, and watch these exceptional students through zoom.</p>
             </div>
             <div class="flex justify-center">
                 <div class="rounded-lg shadow-lg bg-white max-w-lg">
