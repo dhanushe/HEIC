@@ -28,6 +28,17 @@ html {
    */
   
 
+  
+  #hero-section {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #about-section {
+    display: flex;
+    justify-content: space-around;
+  }
+
   /* Rounded Courners */
   #rcorners {
     border-radius: 45px;
