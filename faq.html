@@ -49,7 +49,7 @@
         }
         .wrap-collabsible {
             margin: 1.2rem 0;
-        } .lbl-toggle { 
+        } .lbl-toggle {
             display: block; 
             font-weight: bold; 
             font-size: 1.2rem; 
@@ -92,7 +92,56 @@
         } .collapsible-content .content-inner { 
             background: #32435a46; margin-left: 10%;
             margin-right: 10%; border-bottom: 1px solid #243752; text-align: center; border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; padding: .5rem 1rem; } .collapsible-content p { margin-bottom: 0; }
+        
 
+
+        .wrap-collabsible-two {
+            margin: 1.2rem 0;
+        } .lbl-toggle-two {
+            display: block; 
+            font-weight: bold; 
+            font-size: 1.2rem; 
+            text-transform: uppercase; 
+            text-align: center; 
+            padding: 1rem;
+            margin-left: 10%;
+            margin-right: 10%;
+            color: #DDD; 
+            background: #243752; 
+            cursor: pointer; 
+            border-radius: 7px;
+            transition: all 0.25s ease-out;
+        }
+        .lbl-toggle-two:hover {
+            color: #FFF;
+        }
+        .lbl-toggle-two::before {
+            content: ' ';
+            display: inline-block;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid currentColor;
+            vertical-align: middle; margin-right: .7rem;
+            transform: translateY(-2px);
+            transition: transform .2s ease-out;
+        }
+        .toggle-two:checked+.lbl-toggle-two::before {
+            transform: rotate(90deg) translateX(-3px);
+        } .collapsible-content-two {
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height .25s ease-in-out;
+        } .toggle-two:checked + .lbl-toggle-two + .collapsible-content-two {
+            max-height: 350px;
+        } 
+        .toggle-two:checked+.lbl-toggle-two {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        } .collapsible-content-two .content-inner-two { 
+            background: #32435a46; margin-left: 10%;
+            margin-right: 10%; border-bottom: 1px solid #243752; text-align: center; border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; padding: .5rem 1rem; } .collapsible-content-two p { margin-bottom: 0; }
+
+        
     </style>
 </head>
 <body style="scroll-behavior: smooth">
@@ -191,10 +240,10 @@
         </div>
     </div>
 
-    <div class="wrap-collabsible"> <input id="collapsible" class="toggle" type="checkbox"> <label for="collapsible"
-            class="lbl-toggle">How will competitions fit within my schools time?</label>
-        <div class="collapsible-content">
-            <div class="content-inner">
+    <div class="wrap-collabsible"> <input id="collapsible-two" class="toggle-two" type="checkbox"> <label for="collapsible-two"
+            class="lbl-toggle-two">How will competitions fit within my schools time?</label>
+        <div class="collapsible-content-two">
+            <div class="content-inner-two">
                 <p>sk pls send para</p>
             </div>
         </div>
