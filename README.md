@@ -10,3 +10,5 @@ Project By Dhanush Eashwar, Vishwa Anand, and Sathvik Kotapati
 - Tailwind Open Source Components
 - Animation on Scroll Framework
 ```
+### License
+This project is <a href="https://opensource.org/licenses/MIT" target="_blank">MIT licensed</a>.
