@@ -3,7 +3,7 @@
 TSA Webmaster Submission 2021-2022
 Project By Dhanush Eashwar, Vishwa Anand, and Sathvik Kotapati
 
-### Technologies Used
+### Frameworks Used
 ```
 - Tailwind CSS
 - Tailwind Offical Components
