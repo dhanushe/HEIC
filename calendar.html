@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,12 @@
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <style>
         #hero-section {
-            background: linear-gradient(90deg, #020b0c 0%, #0a1a1c 100%); padding-top: 10%; padding-bottom: 10%;
+            background: linear-gradient(90deg, #020b0c 0%, #0a1a1c 100%);
+            padding-top: 10%;
+            padding-bottom: 10%;
             animation: backgroundcoloranimation 2s ease infinite;
         }
 
@@ -34,26 +38,177 @@
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
 
         }
+
+
+        input[type='checkbox'] {
+            display: none;
+        }
+
+        .wrap-collabsible {
+            margin: 1.2rem 0;
+        }
+
+        .lbl-toggle {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 1rem;
+            margin-left: 10%;
+            margin-right: 10%;
+            color: #DDD;
+            background: #243752;
+            cursor: pointer;
+            border-radius: 7px;
+            transition: all 0.25s ease-out;
+        }
+
+        .lbl-toggle:hover {
+            color: #FFF;
+        }
+
+        .lbl-toggle::before {
+            content: ' ';
+            display: inline-block;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid currentColor;
+            vertical-align: middle;
+            margin-right: .7rem;
+            transform: translateY(-2px);
+            transition: transform .2s ease-out;
+        }
+
+        .toggle:checked+.lbl-toggle::before {
+            transform: rotate(90deg) translateX(-3px);
+        }
+
+        .collapsible-content {
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height .25s ease-in-out;
+        }
+
+        .toggle:checked+.lbl-toggle+.collapsible-content {
+            max-height: 350px;
+        }
+
+        .toggle:checked+.lbl-toggle {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .collapsible-content .content-inner {
+            background: #32435a46;
+            margin-left: 10%;
+            margin-right: 10%;
+            border-bottom: 1px solid #243752;
+            text-align: center;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            padding: .5rem 1rem;
+        }
+
+        .collapsible-content p {
+            margin-bottom: 0;
+        }
+
+
+
+        .wrap-collabsible-two {
+            margin: 1.2rem 0;
+        }
+
+        .lbl-toggle-two {
+            display: block;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 1rem;
+            margin-left: 10%;
+            margin-right: 10%;
+            color: #DDD;
+            background: #243752;
+            cursor: pointer;
+            border-radius: 7px;
+            transition: all 0.25s ease-out;
+        }
+
+        .lbl-toggle-two:hover {
+            color: #FFF;
+        }
+
+        .lbl-toggle-two::before {
+            content: ' ';
+            display: inline-block;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid currentColor;
+            vertical-align: middle;
+            margin-right: .7rem;
+            transform: translateY(-2px);
+            transition: transform .2s ease-out;
+        }
+
+        .toggle-two:checked+.lbl-toggle-two::before {
+            transform: rotate(90deg) translateX(-3px);
+        }
+
+        .collapsible-content-two {
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height .25s ease-in-out;
+        }
+
+        .toggle-two:checked+.lbl-toggle-two+.collapsible-content-two {
+            max-height: 350px;
+        }
+
+        .toggle-two:checked+.lbl-toggle-two {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .collapsible-content-two .content-inner-two {
+            background: #32435a46;
+            margin-left: 10%;
+            margin-right: 10%;
+            border-bottom: 1px solid #243752;
+            text-align: center;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            padding: .5rem 1rem;
+        }
+
+        .collapsible-content-two p {
+            margin-bottom: 0;
+        }
     </style>
 </head>
+
 <body style="scroll-behavior: smooth">
 
     <!-- Nav Bar -->
     <div class="relative bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+            <div
+                class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                 <div class="flex justify-start lg:w-0 lg:flex-1">
                 </div>
                 <nav class="md:flex space-x-10" id="navbar">
-    
+
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='index.html'"
@@ -61,7 +216,7 @@
                             <span>Home</span>
                         </button>
                     </div>
-    
+
                     <div class="relative">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='calendar.html'"
@@ -69,7 +224,7 @@
                             <span>Calendar</span>
                         </button>
                     </div>
-    
+
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='guidelines.html'"
@@ -77,7 +232,7 @@
                             <span>Guidelines</span>
                         </button>
                     </div>
-    
+
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='about.html'"
@@ -85,7 +240,7 @@
                             <span>About</span>
                         </button>
                     </div>
-    
+
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='faq.html'"
@@ -93,7 +248,7 @@
                             <span>FAQ</span>
                         </button>
                     </div>
-    
+
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='contact.html'"
@@ -101,8 +256,8 @@
                             <span>Contact</span>
                         </button>
                     </div>
-    
-    
+
+
                 </nav>
                 <div class="md:flex items-center justify-end md:flex-1 lg:w-0">
                     <a href="registerpart.html"
@@ -118,56 +273,177 @@
 
     <!-- Hero Section -->
     <section class="mx-auto px-auto text-center" id="hero-section">
-        <div class="container text-center p-32">
-            <h2 class="text-4xl font-bold mb-2 text-white text-center" style="text-align: center;">
+        <div class="container text-center p-100">
+            <h2 class="text-6xl font-bold mb-3 text-white text-center" style="text-align: center;">
                 <div>
-                    <span data-aos="fade-in">Highschool Engineering Innovation Conference</span> <div data-aos="zoom-in" data-aos-delay="300" id="color-bg-text">2022</div>
-                </div> 
+                    <span data-aos="fade-in">Calender</span>
+                </div>
             </h2>
             <h3 class="text-2xl mb-8 text-gray-200">
-                An opportunity for the high school students to create and present technology oriented projects.
+                Explore the important dates of our conference.
             </h3>
-            <div>
-                <button class="bg-white font-bold rounded-full py-4 mb-3 px-8 shadow-lg uppercase tracking-wider">
-                    Register - Participant
-                </button>
-                <br>
-                <button class="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
-                    Register - Attendees
-                </button>
-            </div>
-            
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="">
-        <div
-            class="h-screen bg-center flex justify-items-center items-center">
-            <div class="px-10 lg:px-32 xl:px-40">
-                <h1 class="text-6xl font-semibold mb-6">
-                    <span style="color: #04293A;">About Us</span> <br />
-                </h1>
-                <p class="text-lg max-w-md" style="color: #064663;">HEIC is an opportunity for high school students to create and present technology oriented projects in this conference. Each year, six high school student's will be selected based on the creativity, technological excellence, and impact of their project</p>
-                <p class="text-lg max-w-md mt-2 font-semibold" style="color: #064663;">Even if you are not participating, you can still attend, and watch these exceptional students through zoom.</p>
-            </div>
-            <div class="flex justify-center">
-                <div class="rounded-lg shadow-lg bg-white max-w-lg">
-                    <a href="#!">
-                        <img class="rounded-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt="" />
-                    </a>
+
+    <!-- Dates -->
+    <div class="flex flex-col" style="margin-left: 15%; margin-right: 15%;">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+                <div class="overflow-hidden">
+
+<table class="min-w-full text-center mb-10">
+    <thead class="border-b bg-gray-800">
+        <tr>
+            <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                Deadline
+            </th>
+            <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                Submission
+            </th>
+        </tr>
+    </thead class="border-b">
+    <tbody>
+        <tr class="bg-white border-b">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2/15</td>
+            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                <strong>Participant's Abstract Submission</strong>
+            </td>
+        </tr class="bg-white border-b">
+
+
+        <tr class="bg-white border-b">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2/20</td>
+            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                <strong> Attendee Registration</strong>
+            </td>
+        </tr class="bg-white border-b">
+
+    </tbody>
+</table>
+
+
+
+                    <table class="min-w-full text-center">
+                        <thead class="border-b bg-gray-800">
+                            <tr>
+                                <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                    Date
+                                </th>
+                                <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                    Event
+                                </th>
+                                <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                    Presenter
+                                </th>
+                            </tr>
+                        </thead class="border-b">
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">5/15</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Opening Ceremony</strong>, from 8-9 AM PST <br><br>
+                                    <strong>Keynote Participant One</strong>, from 9-9:30 AM PST <br><br>
+                                    <strong>Q/A Session</strong>, from 9:30-10 AM PST <br><br>
+                                </td>
+                                
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Alon Musc</strong> (Host)
+                                </td>
+                            </tr class="bg-white border-b">
+
+
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">5/16</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Introduction to Day Two</strong>, from 8-9 AM PST <br><br>
+                                    <strong>Keynote Participant Two</strong>, from 9-9:30 AM PST <br><br>
+                                    <strong>Q/A Session</strong>, from 9:30-10 AM PST <br><br>
+                                </td>
+                            
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Jacob Ramon</strong> (Introduction)
+                                </td>
+                            </tr class="bg-white border-b">
+
+
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">5/17</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Introduction to Day Three</strong>, from 8-9 AM PST <br><br>
+                                    <strong>Keynote Participant Three</strong>, from 9-9:30 AM PST <br><br>
+                                    <strong>Q/A Session</strong>, from 9:30-10 AM PST <br><br>
+                                </td>
+                            
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Treve Tobs</strong> (Introduction)
+                                </td>
+                            </tr class="bg-white border-b">
+
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">5/18</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Introduction to Day Four</strong>, from 8-9 AM PST <br><br>
+                                    <strong>Keynote Participant Four</strong>, from 9-9:30 AM PST <br><br>
+                                    <strong>Q/A Session</strong>, from 9:30-10 AM PST <br><br>
+                                </td>
+                            
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Treve Tobs</strong> (Introduction)
+                                </td>
+                            </tr class="bg-white border-b">
+
+
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">5/19</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Introduction to Day Five</strong>, from 8-9 AM PST <br><br>
+                                    <strong>Keynote Participant Five</strong>, from 9-9:30 AM PST <br><br>
+                                    <strong>Q/A Session</strong>, from 9:30-10 AM PST <br><br>
+                                </td>
+                            
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Padma Iyer</strong> (Introduction)
+                                </td>
+                            </tr class="bg-white border-b">
+
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">5/20</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Introduction to Day Six</strong>, from 8-9 AM PST <br><br>
+                                    <strong>Keynote Participant Six</strong>, from 9-9:30 AM PST <br><br>
+                                    <strong>Q/A Session</strong>, from 9:30-10 AM PST <br><br>
+                                </td>
+                            
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>John Adams</strong> (Introduction)
+                                </td>
+                            </tr class="bg-white border-b">
+
+
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">5/15</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Closing Ceremony</strong>, from 8-9 AM PST <br><br>
+                                    <strong>Keynote Participants Interview and Q/A</strong>, from 9-9:45 AM PST <br><br>
+                                </td>
+                            
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <strong>Alon Musc</strong> (Closing Ceremony)
+                                </td>
+                            </tr class="bg-white border-b">
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    
-    
-
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 </html>
