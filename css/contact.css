@@ -1,4 +1,5 @@
-#rcorners {
+/* Contact Form CSS */
+#contact-form {
     border-radius: 45px;
     background: linear-gradient(90deg, #020b0c 0%, #0b272b 100%); padding-top: 10%; padding-bottom: 10%;
     color: white;
@@ -8,6 +9,32 @@
     padding: 50px;
     filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
 }
+
+#form-heading {
+    padding-bottom: 10px;
+    font-weight: 1000;
+    font-size: 40px;
+}
+
+#form-button {
+    border-radius: 5px;
+    
+    color: #03171a;
+    padding: 10px;
+}
+
+.form-label {
+    font-weight: 100;
+}
+
+#form-padding {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+
+
+/* Mailing CSS */
 
 .mailing-footer {
     padding-top: 50px;
@@ -40,27 +67,10 @@
     font-weight: 200;
 }
 
-#form-heading {
-    padding-bottom: 10px;
-    font-weight: 1000;
-    font-size: 40px;
-}
 
-#form-button {
-    border-radius: 5px;
-    
-    color: #03171a;
-    padding: 10px;
-}
 
-.form-label {
-    font-weight: 100;
-}
 
-#form-padding {
-    padding-top: 60px;
-    padding-bottom: 20px;
-}
+/* POPUP CSS */
 
 .popup-content {
     position: absolute; 

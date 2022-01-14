@@ -47,6 +47,7 @@
     </style>
 
     <script>
+        // Show/Hide element onclick of submit button by first checking required fields
         function hideShowElement(id) {
             var x = document.getElementById("requiredCheck");
             var y = document.getElementById("requiredCheck2");
@@ -63,6 +64,7 @@
             
         }
 
+        // Show/Hide element onclick of mailing list join button by first checking required fields
         function hideShowElement2(id) {
             var x = document.getElementById("mailing-check");
             if (x.value.length > 0) {
@@ -74,10 +76,10 @@
             }
         }
 
+        // Close submit popup of "yes" button and close svg
         function closePopup(id) {
             document.getElementById("warning-div").style.display = "none";
         }
-
     </script>
 </head>
 
@@ -94,7 +96,6 @@
                 <div class="flex justify-start lg:w-0 lg:flex-1">
                 </div>
                 <nav class="md:flex space-x-10" id="navbar">
-    
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='index.html'"
@@ -174,33 +175,34 @@
     <!-- Form Section -->
     <section class="" id="form-padding" data-aos="zoom-in" data-aos-delay="250">
         
-        <div class="rounded-md p-8" style="text-align: center;" id="rcorners">
-
-            <div class="mb-3" style="text-align: center">
-                <label for="exampleFormControlInput1" class="form-label">Name</label>
-                <input type="text" class="form-control" id="requiredCheck" placeholder="(name)*">
-            </div>
-
-            <div class="mb-3" style="text-align: center">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="requiredCheck2" placeholder="(name@example.com)*">
-            </div>
-
-            <div class="mb-3" style="text-align: center"> 
-                <label for="exampleFormControlTextarea1" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="" placeholder="(subject)">
-            </div>
-
-            <div class="mb-3" style="text-align: center"> 
-                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                <textarea class="form-control" id="requiredCheck3" rows="20" placeholder="(your message)*"></textarea>
-            </div>
-
-            <div class="">
-                <button class="bg-white" id="form-button" onclick="hideShowElement()">
-                    <span>Submit</span>
-                </button>
-            </div>
+        <div class="rounded-md p-8" style="text-align: center;" id="contact-form">
+            <form action="https://formsubmit.co/xanthan.ex@email.com" method="POST">
+                <div class="mb-3" style="text-align: center">
+                    <label f class="form-label">Name</label>
+                    <input type="text" name="name" class="form-control" id="requiredCheck" placeholder="(name)*">
+                </div>
+    
+                <div class="mb-3" style="text-align: center">
+                    <label class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" id="requiredCheck2" placeholder="(name@example.com)*">
+                </div>
+    
+                <div class="mb-3" style="text-align: center"> 
+                    <label class="form-label">Subject</label>
+                    <input  class="form-control" id="" placeholder="(subject)">
+                </div>
+    
+                <div class="mb-3" style="text-align: center"> 
+                    <label class="form-label">Message</label>
+                    <textarea type="text" name="message" class="form-control" id="requiredCheck3" rows="20" placeholder="(your message)*"></textarea>
+                </div>
+    
+                <div class="">
+                    <button  class="bg-white" id="form-button" onclick="hideShowElement()">
+                        <span>Submit</span>
+                    </button>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -238,7 +240,7 @@
 
         <span class="popup-text">Are you sure you want to submit?</span>
 
-        <button class="popup-submit border-2" onclick="closePopup()">
+        <button type="submit" class="popup-submit border-2" onclick="closePopup()">
             <span>Yes</span>
         </button>
     </div>
