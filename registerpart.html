@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <!--<script src="https://unpkg.com/tailwindcss-jit-cdn"></script>--> 
     <style>
@@ -162,6 +163,15 @@
                     <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text" name="email"
                         id="email" placeholder="@gmail.com" />
                 </div>
+                <label class="block text-left" style="max-width: 300px">
+                    <label class="font-semibold block my-3" for="email">Select Submission Type</label>
+                    <select class="form-multiselect block w-full mt-1" multiple>
+                        <option>Sensing/IoT</option>
+                        <option>Coding/Software</option>
+                        <option>Mechanical Innovation</option>
+                        <option>Home Project</option>
+                    </select>
+                </label>
                 <div>
                     <label class="text-gray-800 font-semibold block my-3" for="password">Abstract PDF Format</label>
                     <input class="bg-gray-100 w-full px-4 py-2 rounded-lg focus:outline-none " type="file" name="abstract"
