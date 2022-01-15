@@ -34,7 +34,7 @@
 
 
 
-/* Mailing CSS */
+/* Mailing CSS + MC CSS*/
 
 .mailing-footer {
     padding-top: 50px;
@@ -53,10 +53,9 @@
 #mailing-form {
     padding-top: 30px;
     padding-bottom: 5px;
-    width: 500px;
     display: center; 
     margin: auto;
-    width: 58%;
+    width: 40%; 
 }
 
 #mailing-button {
@@ -67,21 +66,35 @@
     font-weight: 200;
 }
 
+#mc_embed_signup .indicates-required {
+    text-align: right; 
+    font-size:11px; 
+    margin-right:4%;
+}
 
+#mc_embed_signup .asterisk {color:rgb(244 63 94); font-size:150%; font-weight:normal; position:relative; top:5px;} 
+#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%; margin: 0 5%; clear: both;}
+#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+#mc_embed_signup #mce-error-response {background-color: rgb(244 63 94);padding: 10px;display: none;color: white;border-radius: 12px;transition: 1s;width: 25%;font-size: 15px;text-align: center;}
+#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0; transition: 1s;}
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {display:inline-block; margin:2px 0 1em 0; padding:5px 10px; background-color:rgb(26, 26, 26); -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; font-size:14px; font-weight:normal; z-index:1; color:rgb(244 63 94);}
+#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {border:2px solid rgb(244 63 94)}
+#mc_embed_signup #mce-success-response { background-color: #4a9400;padding: 10px;display: none;color: white;border-radius: 12px;transition: 1s;width: 17%;font-size: 15px;text-align: center;}
+#mc_embed_signup #mce-responses {display: flex;justify-content: center;}
 
 
 /* POPUP CSS */
 
 .popup-content {
-    position: absolute; 
+    position: fixed; 
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
     width: 500px;
     flex-direction: column;
-    top: 90%;
-    left: 5%;
+    left: 0.5%;
+    top: 45%;
     height: 20%;
     padding: 16px;
     background-color: white;

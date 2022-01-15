@@ -20,16 +20,13 @@
             background-color: #AEFEFF;
             color: #072227;
             padding: 5px;
-            border-radius: 10px;
             max-width: min-content;
             display: inline-block;
         }
 
-        .gray-background {
-            background: linear-gradient(90deg, #cbcecf 0%, #afb2b3 100%);
+        .nav-button-background {
             padding: 7px;
-            color: black;
-            border-radius: 10px;
+            font-size: 18px;
         }
 
         @keyframes backgroundcoloranimation {
@@ -52,15 +49,44 @@
             var x = document.getElementById("requiredCheck");
             var y = document.getElementById("requiredCheck2");
             var z = document.getElementById("requiredCheck3");
-            if (x.value.length > 0 && y.value != '') {
+            if (x.value.length > 0 && y.value.length > 0 && z.value != '') {
                 var x = document.getElementById("warning-div");
                 x.style.display = "flex";
+                
             } else {
-                alert("Form is not Completed");
-                x.placeholder = "(required*)";
-                y.placeholder = "(required*)";
-                z.placeholder = "(required*)";
-            }
+                var elem1 = x.value.length <= 0;
+                var elem2 = y.value.length <= 0;
+                var elem3 = z.value == '';
+                if (elem1 && elem2 && elem3) {
+                    x.style.border = "2px solid rgb(244 63 94)";
+                    y.style.border = "2px solid rgb(244 63 94)";
+                    z.style.border = "2px solid rgb(244 63 94)";
+                } else if (elem1 && elem2) {
+                    x.style.border = "2px solid rgb(244 63 94)";
+                    y.style.border = "2px solid rgb(244 63 94)";
+                    z.style.border = "";
+                } else if (elem1 && elem3) {
+                    x.style.border = "2px solid rgb(244 63 94)";
+                    y.style.border = "";
+                    z.style.border = "2px solid rgb(244 63 94)";
+                } else if (elem2 && elem3) {
+                    x.style.border = "";
+                    y.style.border = "2px solid rgb(244 63 94)";
+                    z.style.border = "2px solid rgb(244 63 94)";
+                } else if (elem1) {
+                    x.style.border = "2px solid rgb(244 63 94)";
+                    y.style.border = "";
+                    z.style.border = "";
+                } else if (elem2) {
+                    x.style.border = "";
+                    y.style.border = "2px solid rgb(244 63 94)";
+                    z.style.border = "";
+                } else {
+                    x.style.border = "";
+                    y.style.border = "";
+                    z.style.border = "2px solid rgb(244 63 94)";
+                }
+            } 
             
         }
 
@@ -70,9 +96,6 @@
             if (x.value.length > 0) {
                 var x = document.getElementById("warning-div");
                 x.style.display = "flex";
-            } else {
-                alert("Form is not Completed");
-                x.placeholder = "(required*)";
             }
         }
 
@@ -99,7 +122,7 @@
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='index.html'"
-                            class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Home</span>
                         </button>
                     </div>
@@ -107,7 +130,7 @@
                     <div class="relative">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='calendar.html'"
-                            class="text-gray-500 group bg-white inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Calendar</span>
                         </button>
                     </div>
@@ -115,7 +138,7 @@
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='guidelines.html'"
-                            class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Guidelines</span>
                         </button>
                     </div>
@@ -123,7 +146,7 @@
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='about.html'"
-                            class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-700 group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>About</span>
                         </button>
                     </div>
@@ -131,7 +154,7 @@
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='faq.html'"
-                            class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>FAQ</span>
                         </button>
                     </div>
@@ -139,7 +162,7 @@
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='contact.html'"
-                            class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 gray-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Contact</span>
                         </button>
                     </div>
@@ -147,7 +170,7 @@
     
                 </nav>
                 <div class="md:flex items-center justify-end md:flex-1 lg:w-0">
-                    <a href="registerpart.html"
+                    <a href="registerpart.html" style="text-decoration:none"
                         class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
                         Register
                     </a>
@@ -155,6 +178,7 @@
             </div>
         </div>
     </div>
+
 
 
 
@@ -172,17 +196,20 @@
         </div>
     </section>
 
+
+
+
     <!-- Form Section -->
     <section class="" id="form-padding" data-aos="zoom-in" data-aos-delay="250">
         
         <div class="rounded-md p-8" style="text-align: center;" id="contact-form">
-            <form action="https://formsubmit.co/d950c6133fcd7b1a522dab745582b2cc" method="POST">
+            <form action="https://formsubmit.co/d950c6133fcd7b1a522dab745582b2cc" method="POST" id="actual-form">
                 <input type="text" name="_honey" style="display: none;">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html">
 
                 <div class="mb-3" style="text-align: center">
-                    <label f class="form-label">Name</label>
+                    <label class="form-label">Name</label>
                     <input type="text" name="name" class="form-control" id="requiredCheck" placeholder="(name)*">
                 </div>
     
@@ -202,7 +229,7 @@
                 </div>
     
                 <div class="">
-                    <button type="text" class="bg-white" id="form-button" onclick="hideShowElement()">
+                    <button type="button" class="bg-gray-100 hover:bg-gray-400" id="form-button" onclick="hideShowElement()">
                         <span>Submit</span>
                     </button>
                 </div>
@@ -210,29 +237,47 @@
         </div>
     </section>
 
+
+
+
     <!-- Main Listing Section -->
     <section class="mailing-footer" id="blur-element">
         <div class="mailing-footer-c" style="text-align: center;">
-
             <div>
                 <span>Join Our Mailing List</span>
             </div>
+            <div id="mc_embed_signup">
+                <form action="https://gmail.us20.list-manage.com/subscribe/post?u=d743708270c336ee2d17ac18e&amp;id=484553bae6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
 
-            <div class="mb-3" style="text-align: center" id="mailing-form">
-                <input type="email" class="form-control" id="mailing-check" placeholder="(name@example.com)*">
-              </div>
+                    <div class="mc-field-group mb-3" style="padding-top: 1px" id="mailing-form">
+                        <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="(name@example.com)*">
+                    </div>
 
-            <div class="" >
-                <button type="submit" id="form-button"  onclick="hideShowElement2()"
-                    class=" shadow-2xl shadow-white bg-white inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    <span id="mailing-button">Join</span>
-                </button>
+                    <div id="mce-responses" class="clear foot">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    
+
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d743708270c336ee2d17ac18e_484553bae6" tabindex="-1" value=""></div>
+                        <div class="optionalParent">
+                            <div class="clear foot">
+                                <button type="submit" alue="Subscribe" name="subscribe" id="form-button"
+                                    class="bg-gray-100 hover:bg-gray-400 shadow-2xl shadow-white inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    <span id="mailing-button">Join</span>
+                                </button>   
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
         </div>
     </section>
-
     
+
+
+
     <!-- Submit Warning -->
     <div class="popup-content border-3" id="warning-div">
         <button class="popup-close" onclick="closePopup()">
@@ -244,7 +289,7 @@
 
         <span class="popup-text">Are you sure you want to submit?</span>
 
-        <button type="submit" class="popup-submit border-2" onclick="closePopup()">
+        <button type="submit" class="popup-submit border-2" form="actual-form" onclick="closePopup()">
             <span>Yes</span>
         </button>
     </div>

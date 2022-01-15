@@ -9,6 +9,10 @@ Project By Dhanush Eashwar, Vishwa Anand, and Sathvik Kotapati
 - Tailwind Offical Components
 - Tailwind Open Source Components
 - Animation on Scroll Framework
+- Boostrap Official Components
+- Mailchimp Official Framework
+- Mailchimp Official API
+- FormSubmit Official API 
 ```
 ### License
 This project is <a href="https://opensource.org/licenses/MIT" target="_blank">MIT licensed</a>.
