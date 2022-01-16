@@ -7,6 +7,7 @@
     margin: auto;
     width: 48%;
     padding: 50px;
+    margin-top: 80px;
     filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
     animation: moving-gradient 800s linear infinite forwards;
 }
@@ -24,6 +25,7 @@
     transition: 0.1s ease-out;
     color: #222222;
     padding: 10px;
+    margin-top: 20px;
 }
 
 #form-button:hover {
