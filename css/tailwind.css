@@ -10430,7 +10430,10 @@ html {
   .hover\:text-red-300:hover {
     color: #feb2b2;
   }
-  
+  .place-content-center {
+    place-content: center;
+  }
+
   .hover\:text-red-400:hover {
     color: #fc8181;
   }

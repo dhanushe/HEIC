@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSA Webmaster</title>
+    <link rel="shortcut icon" type="image/jpg" href="Favicon_Image_Location"/>
     <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/guidelines.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <style>
         #hero-section {
-            background: linear-gradient(90deg, #020b0c 0%, #0a1a1c 100%); padding-top: 10%; padding-bottom: 10%;
+            background: linear-gradient(90deg, #020b0c 0%, #0d3338 100%); padding-top: 10%; padding-bottom: 10%;
             animation: backgroundcoloranimation 2s ease infinite;
         }
 
@@ -23,11 +32,9 @@
             display: inline-block;
         }
 
-        .gray-background {
-            background: linear-gradient(90deg, #cbcecf 0%, #afb2b3 100%);
+        .nav-button-background {
             padding: 7px;
-            color: black;
-            border-radius: 10px;
+            font-size: 18px;
         }
 
         @keyframes backgroundcoloranimation {
@@ -40,11 +47,39 @@
             100% {
                 background-position: 0% 50%;
             }
-
         }
     </style>
+    
+    <script>
+        $(document).ready(function() {
+		    $('ul.form li a').click(
+			function(e) {
+				e.stopPropagation; 
+				$(this).closest('ul').find('.selected').removeClass('selected');
+				$(this).parent().addClass('selected');
+			});
+        });
+
+        window.addEventListener("scroll", function(event) {
+            var top = this.scrollY;
+            if (top > 230) {
+                var x = document.getElementById('menu');
+                if (x.classList.contains('close-div')) {
+                    x.classList.remove('close-div');
+                }
+                x.classList.add('show-div');
+            } else if (top < 230) {
+                var x = document.getElementById('menu');
+                if (x.classList.contains('show-div')) {
+                    x.classList.remove('show-div');
+                }
+                x.classList.add('close-div');
+            }
+        }, false);
+        </script>
 </head>
 <body style="scroll-behavior: smooth">
+    
 
     <!-- Nav Bar -->
     <div class="relative bg-white">
@@ -113,8 +148,7 @@
         </div>
     </div>
 
-
-
+    
     <!-- Hero Section -->
     <section class="mx-auto px-auto text-center theme-gradient" id="hero-section">
         <div class="container text-center p-100" >
@@ -124,40 +158,281 @@
                 </div> 
             </h2>
             <h3 data-aos="fade-in" class="text-2xl mb-8 text-gray-200">
-                Learn more about HEIC's programs, and to choose one that matches your strengths and interests
+                Learn more about HEIC, and building our future piece by piece
             </h3>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="" id="about-section">
-        <div
-            class="h-screen bg-center flex justify-items-center items-center">
-            <div class="px-10 lg:px-32">
-                <h1 class="text-6xl font-semibold mb-6">
-                    <span style="color: #04293A;">About Us</span> <br />
-                </h1>
-                <p class="text-lg max-w-md" style="color: #064663;">
-                    HEIC is an opportunity for high school students to create and 
-                    present technology oriented projects in this conference. 
-                    Each year, six high school student's will be selected based 
-                    on the creativity, technological excellence, and impact of their project
-                </p>
-                <p class="text-lg max-w-md mt-2 font-semibold" style="color: #064663;">
-                    Even if you are not participating, you can still attend, 
-                    and watch these exceptional students through zoom.
-                </p>
+
+
+    <!-- Menu -->
+    <ul class="form" id="menu">
+		<li><a class="profile" href="#abstract-1" onclick='return bgcheck()'><i class="icon-user"></i>What is an abstract</a></li>
+		<li><a class="profile" href="#abstract-2"><i class="icon-user"></i>Contents of an Abstract</a></li>
+		<li><a class="profile" href="#categories-section"><i class="icon-user"></i>Categories</a></li>
+		<li><a class="messages" href="#guide-section"><i class="icon-envelope-alt"></i>Evaluation</a></li>
+		<li><a class="messages" href="#guide-section-pitch"><i class="icon-envelope-alt"></i>Effective Pitch</a></li>
+		<li><a class="logout" href="#rules-section"><i class="icon-signout"></i>Rules</a></li>
+	</ul>
+
+
+
+
+
+    <!-- Abstract Section -->
+    <section class="mx-auto px-auto text-center" id="abstract-section">
+        <div style="margin-top: 180px;"> <hr class="neu-line"></div>
+        <div class="" id="abstract-1">
+            <h3 class="text-center text-4xl mb-8 text-gray-700" style="margin-top:120px; margin-bottom: 14px;">What is an abstract?</h3>
+            <div style="display: flex;justify-content: center; margin-bottom: 40px;"><hr class="divider div-down"></div>
+            <span class="text-cyan text-xl">
+                An abstract is a short summary of an in-depth analysis on a research topic. <br>
+                The abstract accurately states the outcomes of your project and main objectives that your project hits. <br>
+                An abstract should be complete, concise, clear, and cohesive.
+            </span>
+        </div>
+        <div id="abstract-2">
+            <h3 class="text-center text-4xl mb-8 text-gray-700" style="margin-top:120px; margin-bottom: 14px;">Contents of a Abstract</h3>
+            <div style="margin-bottom: 40px;"><hr class="divider div-down"></div>
+            <span class="text-cyan text-xl">
+                <div style="margin: 25px;">
+                    <span>- The purpose of the project identifying the area of study to which it belongs -<br></span>
+                </div>
+                <div style="margin: 25px;">
+                    <span>- The methods used to address this research problem, documents or evidence analyzed -<br></span>
+                </div>
+                <div style="margin: 25px;">
+                    <span>-  What is new to our understanding as the result of your inquiry? -<br></span>
+                </div>
+                <div style="margin: 25px;">
+                    <span>- The significance of the research project. Why are the results useful? -<br></span>
+                </div>
+            </span>
+        </div>
+        <div style="margin-top: 200px; margin-bottom: 100px;"> <hr class="neu-line"></div>
+    </section>
+
+    
+
+
+
+    <!-- Categories Section -->
+    <section class="mx-auto px-auto text-center" id="categories-section">
+        <h3 class="text-center text-4xl mb-8 text-gray-700" style="margin-top:120px; margin-bottom: 14px;">Categories</h3>
+        <div style="display: flex;justify-content: center; margin-bottom: 40px;"><hr class="divider div-down"></div>
+        <div id="carousel-section">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" id="">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="assets/imgs/coding.png" alt="">
+                        <div class="d-none d-md-block carousel-text">
+                            <h5 class="text-gray-700">Coding / Software</h5>
+                            <p>Apps, Websites, AR, VR, Cybersecurity</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/imgs/sensor.png" alt="">
+                        <div class="d-none d-md-block carousel-text">
+                            <h5 class="text-gray-700">Sensing / IoT</h5>
+                            <p>Detecting facial recognition all the way to forecasts of car accidents</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/imgs/mechanical.png" alt="">
+                        <div class="d-none d-md-block carousel-text">
+                            <h5 class="text-gray-700">Mechanical Engineering</h5>
+                            <p>Projects realting to automating movement with machinery</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/imgs/home-imp.png" alt="">
+                        <div class="d-none d-md-block carousel-text">
+                            <h5 class="text-gray-700">Home Projects</h5>
+                            <p>Home improvment devices that help make living easier</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <div class="flex justify-center">
-                <div class="saturate-200 rounded-lg shadow-lg bg-white max-w-lg">
-                    <a href="#!">
-                        <img class="rounded-lg" src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" alt="" />
-                    </a>
+        </div>
+        <div style="margin-top: 200px; margin-bottom: 100px;"> <hr class="neu-line"></div>
+    </section>
+
+
+
+
+
+    <!-- GuideLine Section -->
+    <section class="mx-auto px-auto text-center" id="guide-section">
+        <div class="">
+            <h3 class="text-center text-4xl mb-8 text-gray-700" style="margin-top:90px; margin-bottom: 20px;"> What are the judges looking for?</h3>
+            <div  style="display: flex;justify-content: center; margin-bottom: 40px;"><hr class="divider div-down">  </div>
+            <span class="text-cyan text-xl" style="margin-bottom: 25px;">
+                The judge will score your application based on these five principles, <br>
+                examining if your presentation accurately displays the output and impact of your product. 
+            </span>
+            <div class="jd-buttons">
+                <div style="margin-bottom: 15px;">
+                    <button class="custom-btn btn-6 collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Impact</button>
+                    <div id="collapse1" class="collapse" data-parent="#accordion">
+                        <div style="margin: 20px;"><hr class="divider2 div-down"></div>
+                        <div class="card-body">
+                            The impact your project has a substantial impact on your scoring. <br>
+                            The judge will consider questions such as: <br>
+                            How impactful was your project on our society? <br>
+                            Did your project improve humankind?
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <button class="custom-btn btn-6 collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Quality</button>
+                    <div id="collapse2" class="collapse" data-parent="#accordion">
+                        <div style="margin: 20px;"><hr class="divider2 div-down"></div>
+                        <div class="card-body">
+                            Quality is far more significant than quantity. If your project has a substantial impact but less quality, <br>
+                            understanding will be harder for the judge and not look appealing. <br>
+                            Presenting it in the finest quality is critical to creating the foremost appeal. 
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <button class="custom-btn btn-6 collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Accuracy</button>
+                    <div id="collapse3" class="collapse" data-parent="#accordion">
+                        <div style="margin: 20px;"><hr class="divider2 div-down"></div>
+                        <div class="card-body">
+                            How accurate is your project? <br>
+                            Can it be developed into an actual product? <br>
+                            Does it efficiently produce an output? <br>
+                            Does the abstract display the correct information concisely?
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <button class="custom-btn btn-6 collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">Presentation</button>
+                    <div id="collapse4" class="collapse" data-parent="#accordion">
+                        <div style="margin: 20px;"><hr class="divider2 div-down"></div>
+                        <div class="card-body">
+                            Simplicity showing in the presentation with bullet points and images. <br>
+                            Does your presentation display the information short and concisely? <br>
+                            Does it creatively show the information? <br>
+                            Does the presentation follow a theme?
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <button class="custom-btn btn-6 collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">Output</button>
+                    <div id="collapse5" class="collapse" data-parent="#accordion">
+                        <div style="margin: 20px;"><hr class="divider2 div-down"></div>
+                        <div class="card-body">
+                            The output to every project is the most significant aspect, what output will your project produce? <br>
+                            The significance of the research project. Why are the results useful? <br>
+                            The it produce an effective output? Is the output simple to produce? 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div id="guide-section-pitch">
+            <h3 class="text-center text-3xl mb-8 text-gray-700" style="margin-top:120px; margin-bottom: 14px;">What makes an effective presentation?</h3>
+            <div style="margin-bottom: 40px;"> <hr class="divider div-down"></div>
+            <span class="text-cyan text-xl">
+                To create an effective presentation involves having clear and logicial communication. <br>
+                Hooking the audience and makeing your project the most appealing will grab more attention. <br>
+                Choose sources that will be helpful and make sure they are reliable. Go through your first draft,  <br>
+                read it thoroughly and re-create the presenation even better.
+            </span>
+        </div>
+        <div style="margin-top: 200px; margin-bottom: 100px;"> <hr class="neu-line"></div>
     </section>
 
+
+
+
+
+    <!-- Rules Section -->
+    <section class="mx-auto px-auto text-center" id="rules-section">
+        <div class="">    
+            <h3 class="text-center text-4xl mb-8 text-gray-700" style="margin-top:120px; margin-bottom: 14px;">Rules</h3>
+            <div style="display: flex;justify-content: center; margin-bottom: 40px;"><hr class="divider div-down"></div>
+            <div class="text-cyan text-xl" style="margin: auto; width: 60%;">
+                <div style="margin: 25px;">
+                    <span>- Terms & Conditions must be followed by the participant -<br></span>
+                </div>
+                <div style="margin: 25px;">
+                    <span>- Presentation should be no more than 10 slides -<br></span>
+                </div>
+                <div style="margin: 25px;">
+                    <span>- Abstract Paper cannot exceed more than 1 page with -<br></span>
+                </div>
+                <div style="margin: 25px;">
+                    <span>- Abstract Paper and Presentation can only be PDF format -<br></span>
+                </div>
+                <div style="margin: 25px;">
+                    <span>- Penalty for leaving out large portions of abstract pdf empty and abnormal font/sizes -<br></span>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 200px; margin-bottom: 100px;"> <hr class="neu-line"></div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <section>
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(26, 26, 26, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(26, 26, 26, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(26, 26, 26, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(26, 26, 26)"/>
+                </g>
+            </svg>
+        </div>
+        <div class="bottom-footer">
+            <div style="text-align: center;"><span class="copyright-text">Copyright © HEIC 2022</span></div>
+            <div class="wrapper">
+                <div class="icon facebook">
+                    <div class="tooltip">Facebook</div>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                </div>
+                <div class="icon twitter">
+                    <div class="tooltip">Twitter</div>
+                    <span><i class="fab fa-twitter"></i></span>
+                </div>
+                <div class="icon instagram">
+                    <div class="tooltip">Instagram</div>
+                    <span><i class="fab fa-instagram"></i></span>
+                </div>
+                <div class="icon github">
+                    <div class="tooltip">Github</div>
+                    <span><i class="fab fa-github"></i></span>
+                </div>
+                <div class="icon youtube">
+                    <div class="tooltip">Youtube</div>
+                    <span><i class="fab fa-youtube"></i></span>
+                </div>
+            </div>
+          </div>
+    </section>
     
     
 
