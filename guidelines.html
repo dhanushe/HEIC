@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSA Webmaster</title>
     <link rel="shortcut icon" type="image/jpg" href="Favicon_Image_Location"/>
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/guidelines.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
@@ -23,6 +24,11 @@
             animation: backgroundcoloranimation 2s ease infinite;
         }
 
+        .nav-button-background {
+            padding: 7px;
+            font-size: 20px;
+        }
+
         #color-bg-text {
             background-color: #AEFEFF;
             color: #072227;
@@ -30,11 +36,6 @@
             border-radius: 10px;
             max-width: min-content;
             display: inline-block;
-        }
-
-        .nav-button-background {
-            padding: 7px;
-            font-size: 18px;
         }
 
         @keyframes backgroundcoloranimation {
@@ -91,7 +92,7 @@
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='index.html'"
-                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-800 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Home</span>
                         </button>
                     </div>
@@ -99,7 +100,7 @@
                     <div class="relative">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='calendar.html'"
-                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-800 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Calendar</span>
                         </button>
                     </div>
@@ -107,7 +108,7 @@
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='guidelines.html'"
-                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-800 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Guidelines</span>
                         </button>
                     </div>
@@ -115,15 +116,15 @@
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='about.html'"
-                            class="text-gray-700 group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            <span>About</span>
+                            class="text-gray-800 group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span>About Us</span>
                         </button>
                     </div>
     
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='faq.html'"
-                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-800 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>FAQ</span>
                         </button>
                     </div>
@@ -131,7 +132,7 @@
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='contact.html'"
-                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-800 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Contact</span>
                         </button>
                     </div>
@@ -162,6 +163,7 @@
             </h3>
         </div>
     </section>
+    
 
 
 
@@ -211,7 +213,20 @@
         </div>
         <div style="margin-top: 200px; margin-bottom: 100px;"> <hr class="neu-line"></div>
     </section>
-
+    <div style="transform: rotate(180deg);">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="linear-gradient(90deg, #020b0c 0%, #0d3338 100%);" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="linear-gradient(90deg, #020b0c 0%, #0d3338 100%);" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="linear-gradient(90deg, #020b0c 0%, #0d3338 100%);" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(26, 26, 26)"/>
+            </g>
+        </svg>
+    </div>
     
 
 

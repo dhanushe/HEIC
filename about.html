@@ -6,15 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSA Webmaster</title>
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
         #hero-section {
+            background: linear-gradient(90deg, #020b0c 0%, #0d3338 100%); padding-top: 10%; padding-bottom: 10%;
             animation: backgroundcoloranimation 2s ease infinite;
+        }
+
+        .nav-button-background {
+            padding: 7px;
+            font-size: 20px;
         }
 
         .theme-gradient {
@@ -29,8 +36,9 @@
             font-size: 5rem;
             border-radius: 20px;
             overflow: hidden;
-            padding: 1.3rem;
-            background: linear-gradient(-45deg, rgba(0, 0, 0, 0.2),rgba(255, 255, 255, 0.3));
+            padding: 2.3rem;
+            background: repeating-linear-gradient(90deg, #ffffff 0%, #d3d3d3 50%, #ffffff 100%);
+            animation: moving-gradient 800s linear infinite forwards;
         }
 
         #color-bg-text {
@@ -39,11 +47,6 @@
             padding: 5px;
             max-width: min-content;
             display: inline-block;
-        }
-
-        .nav-button-background {
-            padding: 7px;
-            font-size: 18px;
         }
 
         .seperator {
@@ -65,71 +68,12 @@
             }
 
         }
+
+        @keyframes moving-gradient{
+            0%{background-position-x: 0%;}
+            100%{background-position-x: 10000vw;}
+        }
     </style>
-
-    <script>
-        // Show/Hide element onclick of submit button by first checking required fields
-        function hideShowElement(id) {
-            var x = document.getElementById("requiredCheck");
-            var y = document.getElementById("requiredCheck2");
-            var z = document.getElementById("requiredCheck3");
-            var elem1 = x.value.length <= 0;
-            var elem2 = y.value.length <= 0;
-            var elem3 = z.value == '';
-            if (elem1 && elem2 && elem3) {
-                x.style.border = "2px solid rgb(244 63 94)";
-                y.style.border = "2px solid rgb(244 63 94)";
-                z.style.border = "2px solid rgb(244 63 94)";
-            } else if (elem1 && elem2) {
-                x.style.border = "2px solid rgb(244 63 94)";
-                y.style.border = "2px solid rgb(244 63 94)";
-                z.style.border = "none";
-            } else if (elem1 && elem3) {
-                x.style.border = "2px solid rgb(244 63 94)";
-                y.style.border = "none";
-                z.style.border = "2px solid rgb(244 63 94)";
-            } else if (elem2 && elem3) {
-                x.style.border = "none";
-                y.style.border = "2px solid rgb(244 63 94)";
-                z.style.border = "2px solid rgb(244 63 94)";
-            } else if (elem1) {
-                x.style.border = "2px solid rgb(244 63 94)";
-                y.style.border = "none";
-                z.style.border = "none";
-            } else if (elem2) {
-                x.style.border = "none";
-                y.style.border = "2px solid rgb(244 63 94)";
-                z.style.border = "none";
-            } else if (elem3) {
-                x.style.border = "none";
-                y.style.border = "none";
-                z.style.border = "2px solid rgb(244 63 94)";
-            } else {
-                x.style.border = "none";
-                y.style.border = "none";
-                z.style.border = "none";
-            }
-            if (x.value.length > 0 && y.value.length > 0 && z.value != '') {
-                var x = document.getElementById("warning-div");
-                x.style.display = "flex";
-
-            }
-        }
-
-        // Show/Hide element onclick of mailing list join button by first checking required fields
-        function hideShowElement2(id) {
-            var x = document.getElementById("mailing-check");
-            if (x.value.length > 0) {
-                var x = document.getElementById("warning-div");
-                x.style.display = "flex";
-            }
-        }
-
-        // Close submit popup of "yes" button and close svg
-        function closePopup(id) {
-            document.getElementById("warning-div").style.display = "none";
-        }
-    </script>
 </head>
 
 
@@ -141,60 +85,59 @@
     <!-- Nav Bar -->
     <div class="relative bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div
-                class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+            <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                 <div class="flex justify-start lg:w-0 lg:flex-1">
                 </div>
                 <nav class="md:flex space-x-10" id="navbar">
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='index.html'"
-                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-800 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Home</span>
                         </button>
                     </div>
-
+    
                     <div class="relative">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='calendar.html'"
-                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-800 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Calendar</span>
                         </button>
                     </div>
-
+    
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='guidelines.html'"
-                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-800 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Guidelines</span>
                         </button>
                     </div>
-
+    
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='about.html'"
-                            class="text-gray-700 group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                            <span>About</span>
+                            class="text-gray-800 group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span>About Us</span>
                         </button>
                     </div>
-
+    
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='faq.html'"
-                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-800 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>FAQ</span>
                         </button>
                     </div>
-
+    
                     <div class="relative mx-2">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button" onclick="location.href='contact.html'"
-                            class="text-gray-700 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            class="text-gray-800 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 nav-button-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>Contact</span>
                         </button>
                     </div>
-
-
+    
+    
                 </nav>
                 <div class="md:flex items-center justify-end md:flex-1 lg:w-0">
                     <a href="registerpart.html" style="text-decoration:none"
@@ -228,7 +171,7 @@
         <div class="container text-center m-10 theme-gradient-morphic rounded-lg text-black">
             <h1 class="text-5xl font-bold leading-tight">Our Mission</h1>
             <h3 class="text-2xl mb-8 font-semibold">
-                To create a friendly, competitive, environment for high school students to explore and innovate in technological endeavour.
+                To create a friendly and competitive environment for high school students to explore and innovate in technological endeavour.
             </h3>
 
         </div>
@@ -311,6 +254,49 @@
         </section>
     </div>
     
+
+    <!-- Footer -->
+    <section>
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(26, 26, 26, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(26, 26, 26, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(26, 26, 26, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(26, 26, 26)"/>
+                </g>
+            </svg>
+        </div>
+        <div class="bottom-footer">
+            <div style="text-align: center;"><span class="copyright-text">Copyright © HEIC 2022</span></div>
+            <div class="wrapper">
+                <div class="icon facebook">
+                    <div class="tooltip">Facebook</div>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                </div>
+                <div class="icon twitter">
+                    <div class="tooltip">Twitter</div>
+                    <span><i class="fab fa-twitter"></i></span>
+                </div>
+                <div class="icon instagram">
+                    <div class="tooltip">Instagram</div>
+                    <span><i class="fab fa-instagram"></i></span>
+                </div>
+                <div class="icon github">
+                    <div class="tooltip">Github</div>
+                    <span><i class="fab fa-github"></i></span>
+                </div>
+                <div class="icon youtube">
+                    <div class="tooltip">Youtube</div>
+                    <span><i class="fab fa-youtube"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
