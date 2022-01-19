@@ -87,14 +87,13 @@
 /* Guidelines Buttons (Judge Page) */
 
 .custom-btn {
-    width: 130px;
-    height: 40px;
     color: #fff;
     border-radius: 5px;
-    padding: 10px 25px;
+    padding: 10px;
     text-decoration: none;
     font-family: 'Lato', sans-serif;
-    font-weight: 500;
+    font-weight: 300;
+    font-size: 1.2rem;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -113,11 +112,11 @@
 }
 
 .btn-6 {
-    color: rgb(80, 80, 80);
+    color: rgb(44, 44, 44);
     background: repeating-linear-gradient(90deg, #ffffff 0%, #ebebeb 50%, #ffffff 100%); padding-top: 10%; padding-bottom: 10%;
     line-height: 42px;
-    padding: 0px;
     border: none;
+    padding: 18px;
     width: 40%;
     margin: auto;
     -webkit-animation: moving-gradient 800s linear infinite forwards;
@@ -318,120 +317,4 @@ ul.form {
 }
 
 
-/* Footer */
 
-.bottom-footer {
-    position: relative;
-    background: rgb(26, 26, 26);
-}
-
-.copyright-text {
-    position: absolute;
-    z-index: 10;
-    top: 25px;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    width: 20%;
-    margin-right: auto; 
-    color: #ececec;
-    font-weight: 100;
-    text-transform: uppercase;
-}
-
-.wrapper {
-    display: inline-flex;
-    margin-left: 76%;
-    margin-bottom: 1rem;
-}
-  
-.wrapper .icon {
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 15px;
-    margin: 10px;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-  
-.wrapper .tooltip {
-    position: absolute;
-    top: 0;
-    font-size: 14px;
-    background-color: #ffffff;
-    color: #ffffff;
-    padding: 5px 8px;
-    border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-  
-.wrapper .tooltip::before {
-    position: absolute;
-    content: "";
-    height: 8px;
-    width: 8px;
-    background-color: #ffffff;
-    bottom: -3px;
-    left: 50%;
-    transform: translate(-50%) rotate(45deg);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-  
-.wrapper .icon:hover .tooltip {
-    top: -45px;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-  
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-  
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before {
-    background-color: #3b5999;
-    color: #ffffff;
-}
-  
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-    background-color: #46c1f6;
-    color: #ffffff;
-}
-  
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-    background-color: #e1306c;
-    color: #ffffff;
-}
-  
-.wrapper .github:hover,
-.wrapper .github:hover .tooltip,
-.wrapper .github:hover .tooltip::before {
-    background-color: #333333;
-    color: #ffffff;
-}
-  
-.wrapper .youtube:hover,
-.wrapper .youtube:hover .tooltip,
-.wrapper .youtube:hover .tooltip::before {
-    background-color: #de463b;
-    color: #ffffff;
-}
