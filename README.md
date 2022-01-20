@@ -9,6 +9,8 @@
 
 <p align=center>
 <a href="https://github.com/Cay-Zhang/SwiftSpeech/blob/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat"></a>
+<a href="https://github.com/Cay-Zhang/SwiftSpeech/blob/master/LICENSE"><img src="https://img.shields.io/badge/swift-5.2+-fe562e"></a>
+
 </p>
 
 <h4 align=center>Webmaster Submission 2021-2022 <br> Project By Dhanush Eashwar, Vishwa Anand, and Sathvik Kotapati </h4>
