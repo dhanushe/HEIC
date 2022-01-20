@@ -6,7 +6,12 @@
 <h3 align=center>High School Engineering and Innovation Conference</h3>
 <h3 align=center style="font-weight: normal;">The High School Innovation Conference is the foremost global forum for the next generation of high school innovators, and thinkers to compete and present their projects.</h3>
 
-<h4 align=center>TSA Webmaster Submission 2021-2022 <br> Project By Dhanush Eashwar, Vishwa Anand, and Sathvik Kotapati </h4>
+
+<p align=center>
+<a href="https://github.com/Cay-Zhang/SwiftSpeech/blob/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat"></a>
+</p>
+
+<h4 align=center>Webmaster Submission 2021-2022 <br> Project By Dhanush Eashwar, Vishwa Anand, and Sathvik Kotapati </h4>
 
 ### Frameworks Used
 ```
