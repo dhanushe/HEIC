@@ -1,5 +1,5 @@
 <div align=center>
-<img src="Readme Assets/logo.png" width="180" height="180" style="border-radius: 25px;" align=center>
+<img src="Readme Assets/rounded-logo.png" width="180" height="180" align=center>
 </div>
 
 <h1 align=center>HEIC</h1>
