@@ -4,7 +4,7 @@
 
 <h1 align=center>HEIC</h1>
 <h3 align=center>High School Engineering and Innovation Conference</h3>
-<h3 align=center style="font-weight: normal;">The High School Innovation Conference is the foremost global forum for the next generation of high school innovators, and thinkers to compete and present their projects.</h3>
+<h3 align=center style="font-weight: normal;">The High School Innovation Conference is the foremost global forum for the next generation of future high school leaders, innovators, and thinkers to compete and present their projects.</h3>
 
 
 <p align=center>
@@ -22,9 +22,23 @@
 - Tailwind Open Source Components
 - Animation on Scroll Framework
 - Boostrap Official Components
-- Mailchimp Official Framework
 - Mailchimp Official API
 - FormSubmit Official API 
+- JQuery Library
+- JSDelivr Library
+- Unpkg Open Source Components
+- Google Official Ajax Library
 ```
+
+### Image Copyrigths
+```
+- Canva Free Images (Allowed for commercial and noncommercial use)
+```
+<a href="https://www.canva.com/policies/free-media-license-agreement-2022-01-03/" target="_blank">further info</a>
+```
+- Unsplash Images (Copyright Free, Allowed for commercial and noncommercial use)
+```
+<a href="https://unsplash.com/license" target="_blank">further info</a>
+
 ### License
 This project is <a href="https://opensource.org/licenses/MIT" target="_blank">MIT licensed</a>.
