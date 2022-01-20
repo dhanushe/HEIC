@@ -1,12 +1,12 @@
 <div align=center>
-<img src="Readme Assets/logo.png" width="180" height="180" align=center>
+<img src="Readme Assets/logo.png" width="180" height="180" style="border-radius: 25px;" align=center>
 </div>
 
 <h1 align=center>HEIC</h1>
 <h3 align=center>High School Engineering and Innovation Conference</h3>
+<h3 align=center style="font-weight: normal;">The High School Innovation Conference is the foremost global forum for the next generation of high school innovators, and thinkers to compete and present their projects.</h3>
 
-TSA Webmaster Submission 2021-2022
-Project By Dhanush Eashwar, Vishwa Anand, and Sathvik Kotapati
+<h4 align=center>TSA Webmaster Submission 2021-2022 <br> Project By Dhanush Eashwar, Vishwa Anand, and Sathvik Kotapati </h4>
 
 ### Frameworks Used
 ```
