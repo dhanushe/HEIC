@@ -30,7 +30,7 @@
 - Google Official Ajax Library
 ```
 
-### Image Copyrigths
+### Image Copyrights
 ```
 - Canva Free Images (Allowed for commercial and noncommercial use)
 ```
