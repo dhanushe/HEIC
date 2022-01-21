@@ -15,7 +15,7 @@
 
 <h4 align=center>Webmaster Submission 2021-2022 <br> Project By Dhanush Eashwar, Vishwa Anand, and Sathvik Kotapati </h4>
 
-### Frameworks Used
+### Frameworks Used in the pRoject
 ```
 - Tailwind CSS
 - Tailwind Offical Components
