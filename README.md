@@ -15,7 +15,7 @@
 
 <h4 align=center>Webmaster Submission 2021-2022 <br> Project By Dhanush Eashwar, Vishwa Anand, and Sathvik Kotapati </h4>
 
-### Frameworks Used in the pRoject
+### Frameworks Used in the Project
 ```
 - Tailwind CSS
 - Tailwind Offical Components
@@ -34,11 +34,11 @@
 ```
 - Canva Free Images (Allowed for commercial and noncommercial use)
 ```
-<a href="https://www.canva.com/policies/free-media-license-agreement-2022-01-03/" target="_blank">further info</a>
+<a href="https://www.canva.com/policies/free-media-license-agreement-2022-01-03/" target="_blank">View Canva License</a>
 ```
 - Unsplash Images (Copyright Free, Allowed for commercial and noncommercial use)
 ```
-<a href="https://unsplash.com/license" target="_blank">further info</a>
+<a href="https://unsplash.com/license" target="_blank">View Unsplash License</a>
 
 ### License
 This project is <a href="https://opensource.org/licenses/MIT" target="_blank">MIT licensed</a>.
